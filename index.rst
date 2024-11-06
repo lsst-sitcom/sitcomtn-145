@@ -65,8 +65,7 @@ Results for analysis SITCOM-1285
 .. figure:: /_static/obs467_investigation_whole_weekend.png
    :name: fig-obs-467_investigation_whole_weekend
 
-   Distribution of slew events, including those that failed the test, in azimuth and elevation, for dayObs 
-   20232012.
+   Telemetry of various subsystems around the vibration event.
 
 The plots above indicate low-amplitude vibrations on both the Rotator and M2 from 00:40 to 15:00 UTC on March 10. 
 According to the OLE logs, the initial problematic measurements using the Laser Tracker began around 00:44, which aligns with the observations in the plots.
@@ -84,8 +83,7 @@ Notably, both hexapods were subject to significant movement near the onset of th
 .. figure:: /_static/rotator_data_tea_vibration.png
    :name: fig-rotator_data_tea_vibration
 
-   Distribution of slew events, including those that failed the test, in azimuth and elevation, for dayObs 
-   20232012.
+   Rotator telemetry data duration vibration event.
 
 Extract dominant frequencies from sound waves in video associated with vibrations on Top-End Assembly
 -----------------------------------------------------------------------------------------------------
@@ -100,9 +98,7 @@ Plots and description here:
 Extract dominant frequencies from sound waves in video associated with vibrations on Top-End Assembly II
 --------------------------------------------------------------------------------------------------------
 
-In this analyses we wanted to analyze the dominant frequencies for all three videos separatelly.
-For all of the sygnals we plot the spectrograms, FFT and the PSD. 
-None of the results are conclusive. Analyses are reepeated on the denoised sygnals but the results stay inconclusive. 
+In these analyses we wanted to explore the dominant frequencies for all three videos separately. For every signal we plot the spectrograms, Fast Fourier Transform (FFT) and the Power Spectral Density (PSD).  None of the results are conclusive. Analyses are repeated on the denoised signals but the results stay inconclusive. 
 Here we will show the results of the original audio signals. 
 
 Results for analysis SITCOM-1397
@@ -111,17 +107,17 @@ Results for analysis SITCOM-1397
 .. figure:: /_static/Spectrograms.png
    :name: fig-spectrograms
 
-   Spectrograms of the 3 audio signals separatelly
+   Spectrograms of the 3 audio signals separately
 
 .. figure:: /_static/FFT.png
    :name: fig-FFT
 
-   Fast Furie transformation for the 3 audio signals.
+   Fast Fourier transformation for the 3 audio signals.
 
 .. figure:: /_static/PSD.png
    :name: fig-PSD
 
-   Power Spectral Density if the 3 audio signals. 
+   Power Spectral Density for the 3 audio signals. 
 
 TEA Vibration Analysis using MTCamHexapod telemetries
 -----------------------------------------------------
