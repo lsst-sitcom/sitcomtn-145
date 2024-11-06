@@ -122,8 +122,8 @@ Results for analysis SITCOM-1397
 TEA Vibration Analysis using MTCamHexapod telemetries
 -----------------------------------------------------
 
-Each sub-component of the TEA requires analysis to detect vibrations using system telemetry data, as well as force and torque measurements across all axes. 
-This analyses will focus on the MTCamHexapods to produce foundational plots, including position and torque/force plots with their respective Fast Fourier Transforms (FFTs). 
+Each sub-component of the TEA requires an analysis to detect vibrations using system telemetry data, as well as force and torque measurements across all axes. 
+This analysis will focus on the MTCamHexapods to produce foundational plots, including position and torque/force plots with their respective FFTs. 
 Position and torque/force plots will display peak-to-peak numerical values for each telemetry, while FFT plots will indicate the numerical value of the dominant frequency.
 
 Results for analysis SITCOM-1485
@@ -144,7 +144,22 @@ Plots and description here:
 TEA Vibration Analysis using MTM2 telemetries
 ---------------------------------------------
 
-This analyses is the same as the previous one but with MTM2 telemetries.
+The following plots consider MTM2 telemetries. In this case positions, rotations (from the independent measurement system) and displacements are produced per axis, together with their FFT.
+
+.. figure:: /_static/mtm2_positionIMS_Position_Strong.png
+   :name: fig-M2-positionIMS-Position
+
+   IMS position measurements during vibration event and FFT.
+
+.. figure:: /_static/mtm2_positionIMS_Rotation_Strong.png
+   :name: fig-M2-positionIMS-Rotation
+
+   IMS rotation measurements during vibration event and FFT.
+
+.. figure:: /_static/mtm2_displacementSensorsdeltaZ_Strong.png
+   :name: fig-M2-displacementSensorsdeltaZ
+
+   Z-axis displacements on actuators (TBC) during vibration event and FFT.
 
 Results for analysis SITCOM-1487
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
