@@ -61,8 +61,8 @@ This comparison aims to assess the vibration levels under each condition.
 
 Results for analysis SITCOM-1285
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. _label:
-.. figure:: /_static/obs-467_investigation_whole_weekend.png
+
+.. figure:: /_static/obs467_investigation_whole_weekend.png
    :name: fig-obs-467_investigation_whole_weekend
 
    Distribution of slew events, including those that failed the test, in azimuth and elevation, for dayObs 
@@ -81,7 +81,6 @@ Analysis of the hexapod data reveals two instances of warm-up sequences: one aro
 These sequences provide baseline data on the typical movement range of the hexapods. 
 Notably, both hexapods were subject to significant movement near the onset of the detected vibrations and oscillations.
 
-.. _label:
 .. figure:: /_static/rotator_data_tea_vibration.png
    :name: fig-rotator_data_tea_vibration
 
@@ -108,19 +107,17 @@ Here we will show the results of the original audio signals.
 
 Results for analysis SITCOM-1397
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. _label:
-.. figure:: /_static/spectrograms.png
+
+.. figure:: /_static/Spectrograms.png
    :name: fig-spectrograms
 
    Spectrograms of the 3 audio signals separatelly
 
-.. _label:
 .. figure:: /_static/FFT.png
    :name: fig-FFT
 
    Fast Furie transformation for the 3 audio signals.
 
-.. _label:
 .. figure:: /_static/PSD.png
    :name: fig-PSD
 
