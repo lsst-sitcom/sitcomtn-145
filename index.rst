@@ -161,10 +161,8 @@ The following plots consider MTM2 telemetries. In this case positions, rotations
 
    Z-axis displacements on actuators (TBC) during vibration event and FFT.
 
-Results for analysis SITCOM-1487
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Upon study of the IMS position and rotation variables, a clear 0.5 Hz vibration or oscillation is seen. This can be seen in the 'y' direction and xRot and yRot rotation axes more clearly. The displacement sensors detect this clearly in the delta or displacement as well, in all tangent link points. These values are to be contrasted with those from the hexapods as the relative amplitudes could say something about the origin of the vibration.
 
-Plots and description here:
 
 TEA Vibration Analysis using TMA telemetries
 --------------------------------------------
