@@ -21,3 +21,21 @@ orcid = "https://orcid.org/0000-0002-8130-3593"
 name = "Vera C. Rubin Observatory"
 internal_id = "RubinObsC"
 address = "Avenida Juan Cisternas #1500, La Serena, Chile"
+
+[[technote.authors]]
+name.given = "Marina"
+name.family = "Pavlovic"
+orcid = "https://orcid.org/0000-0001-5560-7051"
+affiliations = [{name = "Rubin Observatory", internal_id = "RubinObs", address = "1500 ave. Huan Cisternas, La Serena, Chile"}]
+
+[[technote.authors]]
+name.given = "Nacho"
+name.family = "Sevilla"
+internal_id = "sevillai"
+affiliations = [{name = "CIEMAT", internal_id = "CIEMAT", address = "Av. Complutense 40 28040 Madrid Spain"}]
+
+[[technote.authors]]
+name.given = "Laura"
+name.family = "Toribio San Cipriano"
+internal_id = "toribiol"
+affiliations = [{name = "CIEMAT", internal_id = "CIEMAT", address = "Av. Complutense 40 28040 Madrid Spain"}]
