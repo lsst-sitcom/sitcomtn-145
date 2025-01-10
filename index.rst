@@ -88,12 +88,55 @@ Notably, both hexapods were subject to significant movement near the onset of th
 Extract dominant frequencies from sound waves in video associated with vibrations on Top-End Assembly
 -----------------------------------------------------------------------------------------------------
 
-Three videos with sound were recorded from the Top End Assembly and compiled into a single file, which is attached here. 
-The objective is to analyze the dominant frequencies present in different sections of the video.
+Three videos with sound were recorded from the TEA, at three different instances -- 
+
+**event 1**:  09-03-2024 --> time-window of suspected vibrations
+
+**event 2**: 10-03-2024 --> 12 hrs after the above event; possibly with continued vibrations
+
+**event 3**: 10-03-2024 --> without vibrations
+
+The objective is to analyze the dominant frequencies present in the audio signals of the video for each of the three
+events. For each event, we extract the audio from the .mp4 video and analyse the audio signals in each of the two channels
+separately. Note that we have not denoised the signal. 
+
 
 Results for analysis SITCOM-1345
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Plots and description here:
+A. We use  analysis to identify constituent frequencies in the audio signal in each of the channels. Note that we do not 
+use the 'rfft' or real FFT even if the signal is real. The reason for this is to retain the directionality of 
+frequencies i.e. +ve or forward going frequencies or -ve or reverse frequencies. These can potentially be a way of 
+identifying/separating out the frequency of the vibrations e.g. the instrument can have a base continuum sound with 
+a specific frequency(s) that can be identified as positive while an unexpected/resistive vibration could be 
+detected as a -ve frequency. *Within 100 Hz, this analysis identified a dominent frequency of ~50Hz for events 1 & 3 and ~63 Hz for 
+event 2. However, we cannot conclusively link them to the vibrations from this analysis alone*. The audio signal is comprised of 
+frequencies upto 20kHz, picking up high frequency contamination/noise as well. 
+
+.. figure:: /_static/fft-1345.png
+   :name: spectrograms-1345  
+   
+   Frequency composition from FFT analysis on channel-2 signal for events 1,2 & 3 respectively. 
+
+B. We use Power Spectrum density (PSD) as a method to determine the power distribution across frequency. 
+This method is also more useful to identify the vibration if any across the entire frequency range. *We cannot
+conclude anything from this analysis*
+
+.. figure:: /_static/psd-1345.png
+   :name: psd-1345
+   
+   PSD of channel-2 signal across entire frequency range for events 1,2 & 3 respectively. 
+
+C. A spectrogram is essentially a plot that shows the distribution of frequency across time. Hence, any time-sensitive 
+frequency changes should hence be identifiable on this plot. We used a short-time fourier transform (sFFT) and the
+colourbar on the plot to indicate the amplitude (bright yellow being the highest amplitude). We detect a time-dependent 
+signal of 200-250 Hz in all the three events -- the temporal incidence being similar for events 2 & 3. 
+
+
+.. figure:: /_static/spectrogram-1345.png
+   :name: spectrograms-1345
+
+   Spectrogram of channel-2 signal within 1kHz range for events 1,2 & 3 respectively. 
+    
 
 Extract dominant frequencies from sound waves in video associated with vibrations on Top-End Assembly II
 --------------------------------------------------------------------------------------------------------
