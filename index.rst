@@ -216,7 +216,7 @@ Interestingly, the amplitude of the signal during the vibration event is barely 
    :name: 1485-current-none
 
    MTCam Hexapod currents through struts 1 to 6 before the TEA vibration. Note that FFT analysis on hexapod currents is 
-   unreliable as we have not yet modelled the baseline strut current profile.   
+   unreliable as we have not yet modelled the baseline strut current profile needed for accurate detrending. 
 
 
 .. figure:: /_static/camhex-current-012-Strong.png
@@ -233,9 +233,10 @@ Interestingly, the amplitude of the signal during the vibration event is barely 
 
 
 
-Analysis of Strut currents: During a 2 minute window in the TEA vibration, we detect a characteristic peak frequency 
+**Analysis of Strut currents**: During a 2 minute window in the TEA vibration, we detect a characteristic peak frequency 
 of ~0.49 Hz in all 6 motor currents, same as positions and again consistent with MTRotator Analysis which gave us a 
-0.54 Hz (Te-Wei; DM-45291). Interestingly, current through Strut 2 also shows the 2nd and 4th harmonics while current 
+0.54 Hz (Te-Wei; `DM-45291 <https://rubinobs.atlassian.net/browse/DM-45291>`_). Interestingly, current through Strut 2 
+also shows the 2nd and 4th harmonics while current 
 through Strut 3 shows 2nd and 3rd harmonics of the 0.49 Hz. Strut 4 current shows a lot more (it is also the famous 
 runaway Strut !). Each of the Strut currents show dramatic increase in amplitudes. 
 
@@ -243,13 +244,75 @@ runaway Strut !). Each of the Strut currents show dramatic increase in amplitude
 TEA Vibration Analysis using MTM2Hexapod telemetries
 ----------------------------------------------------
 
+This analysis will focus on the MTM2Hexapods to produce foundational plots, including position and current 
+plots with their respective FFTs. Position and current plots will display peak-to-peak numerical values for each telemetry, while FFT 
+plots will indicate the numerical value of the dominant frequency.
 
-Analysis of Strut currents: During a 2 minute window in the TEA vibration, we detect a characteristic peak frequency of ~0.49 Hz in all 6 motor currents, same as positions and again consistent with MTRotator Analysis which gave us a 0.54 Hz (Te-Wei; DM-45291). Interestingly, current through Strut 2 also shows the 2nd and 4th harmonics while current through Strut 3 shows 2nd and 3rd harmonics of the 0.49 Hz. Strut 4 current shows a lot more (it is also the famous runaway Strut !). Each of the Strut currents show dramatic increase in amplitudes. 
+The analysis uses the telemetry over the same 2-minute time window -- from SITCOM-1485 -- before and during Event 1. 
+The MTM2 hexapods were NOT in `CompensationMode`.
 
 Results for analysis SITCOM-1486
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Plots and description here:
+.. figure:: /_static/m2hex-position-xyz-None.png
+   :name: 1486-position-none
+
+   MTM2 hexapod positions before the TEA vibration event. 
+
+.. figure:: /_static/m2hex-position-xyz-Strong.png
+   :name: 1486-position-strong
+
+   MTM2 hexapod positions during the TEA vibration event. We detect a characteristic frequency of 7.3 Hz in all the 
+   linear axes along with peaks at ~5 Hz and 2 Hz for X and Y axes. 
+
+
+.. figure:: /_static/m2hex-position-uvw-None.png
+   :name: 1486-rotation-none
+   
+   MTM2 hexapod rotational positions before the TEA vibration event. 
+
+
+.. figure:: /_static/m2hex-position-uvw-Strong.png
+   :name: 1486-rotation-strong
+
+   MTM2 hexapod rotational positions during the TEA vibration event. We detect a characteristic frequency of 7.3 Hz in all the 
+   linear axes along with peaks at ~5 Hz and 2 Hz in W rotation axis. 
+
+
+During a 2 minute window in the TEA vibration, we detect a characteristic peak frequency of ~7.3 Hz in most of the 
+6 axes, followed by 5 Hz and ~2 Hz for X, Y and W axes. Its slightly different than MTRotator Analysis which gave 
+us a 0.54 Hz (Te-Wei; `DM-45291 <https://rubinobs.atlassian.net/browse/DM-45291>`_) and MTCamHex Analysis which gave 
+a 7.3 Hz in addition to 0.49 Hz. This is not surprising as MTM2 is extremely sensitive !
+Note that structurally the strut and force actuator interaction is different 
+for MTCam and MTM2 Hexapods. 
+
+.. figure:: /_static/m2hex-current-None.png
+   :name: 1486-current-none
+
+   MTM2 Hexapod currents through struts 1 to 6 before the TEA vibration. Note that FFT analysis on hexapod currents is 
+   unreliable as we have not yet modelled the baseline strut current profile needed for accurate detrending. 
+
+
+.. figure:: /_static/m2hex-current-012-Strong.png
+   :name: 1486-current012-strong
+
+   MTM2 Hexapod currents through struts 1 to 3 during the TEA vibration.
+
+
+.. figure:: /_static/m2hex-current-345-Strong.png
+   :name: 1486-current345-strong
+
+   MTM2 Hexapod currents through struts 4 to 6 during the TEA vibration. In addition to 0.49 Hz, We detect extra 
+   frequency peaks at 1 Hz and 8 Hz in strut 4 and possible harmonics of 0.49 Hz in strut 6. 
+
+
+**Analysis of Strut currents**: During a 2 minute window in the TEA vibration, we detect a characteristic peak frequency 
+of ~0.49 Hz in all 6 motor currents, same as positions and again consistent with MTRotator Analysis which gave us a 
+0.54 Hz (Te-Wei; `DM-45291 <https://rubinobs.atlassian.net/browse/DM-45291>`_) and MTCam Hexapod analysis presented above.
+Additionally, current through Strut 6 harmonics while current 
+through Strut 4 (runaway strut) show a sharp harmonic at 1 Hz and a peak at 8 Hz. Each of the Strut currents show 
+dramatic increase in amplitudes. 
+
 
 TEA Vibration Analysis using MTM2 telemetries
 ---------------------------------------------
