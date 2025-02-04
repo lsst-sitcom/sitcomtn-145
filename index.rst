@@ -36,7 +36,7 @@ Related Tickets
 ===============
 
 * `SITCOM-1285 <https://rubinobs.atlassian.net/browse/SITCOM-1285>`_: *Analize vibration on the TMA Top-End-Assembly*
-* `SITCOM-1345 <https://rubinobs.atlassian.net/browse/SITCOM-1172>`_: *Extract dominant frequencies from sound waves in video associated with vibrations on Top-End Assembly*
+* `SITCOM-1345 <https://rubinobs.atlassian.net/browse/SITCOM-1345>`_: *Extract dominant frequencies from sound waves in video associated with vibrations on Top-End Assembly*
 * `SITCOM-1397 <https://rubinobs.atlassian.net/browse/SITCOM-1397>`_: *Extract dominant frequencies from sound waves in video associated with vibrations on Top-End Assembly II*
 * `SITCOM-1485 <https://rubinobs.atlassian.net/browse/SITCOM-1485>`_: *TEA Vibration Analysis using MTCamHexapod telemetries*
 * `SITCOM-1486 <https://rubinobs.atlassian.net/browse/SITCOM-1486>`_: *TEA Vibration Analysis using MTM2Hexapod telemetries*
@@ -166,19 +166,85 @@ Results for analysis SITCOM-1397
 TEA Vibration Analysis using MTCamHexapod telemetries
 -----------------------------------------------------
 
-Each sub-component of the TEA requires an analysis to detect vibrations using system telemetry data, as well as force and torque measurements across all axes. 
-This analysis will focus on the MTCamHexapods to produce foundational plots, including position and torque/force plots with their respective FFTs. 
-Position and torque/force plots will display peak-to-peak numerical values for each telemetry, while FFT plots will indicate the numerical value of the dominant frequency.
+Each sub-component of the TEA requires an analysis to detect vibrations using system telemetry data, as well as force 
+and torque measurements across all axes. 
+This analysis will focus on the MTCamHexapods to produce foundational plots, including position and current 
+plots with their respective FFTs. Position and current plots will display peak-to-peak numerical values for each telemetry, while FFT 
+plots will indicate the numerical value of the dominant frequency.
+
+The analysis uses the telemetry over a 2-minute time window before and during Event 1 described above. The MTCam hexapods 
+were NOT in `CompensationMode`.
 
 Results for analysis SITCOM-1485
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. figure:: /_static/camhex-position-xyz-None.png
+   :name: 1485-position-none
 
-Plots and description here:
+   MTCam hexapod positions before the TEA vibration event. We detect a frequency of ~7 Hz especially in z-axis. 
+   Although the SNR is not great in the FFT analysis, it may still indicate an external influence or inherent signal 
+   that may affect the Cam Hexapod depending on the orientation of TMA (e.g horizon vs zenith).
+
+.. figure:: /_static/camhex-position-xyz-Strong.png
+   :name: 1485-position-strong
+
+   MTCam hexapod positions during the TEA vibration event. We detect a characteristic frequency of 7.2 Hz in all the 
+   linear axes. 
+
+
+.. figure:: /_static/camhex-position-uvw-None.png
+   :name: 1485-rotation-none
+   
+   MTCam hexapod rotational positions before the TEA vibration event. 
+
+
+.. figure:: /_static/camhex-position-uvw-Strong.png
+   :name: 1485-rotation-strong
+
+   MTCam hexapod rotational positions during the TEA vibration event. 
+
+
+
+However, during a 2 minute window in the TEA vibration, we detect a 
+characteristic peak frequency of ~7.2 Hz in all 6 axes, followed by 6.7 Hz and ~0.49 Hz in all 6 axes. It is obvious 
+that the above inherent frequency of ~7 Hz is resonant along with extra signals of two additional frequencies. Part of 
+this is consistent with MTRotator Analysis which gave us a 0.54 Hz (Te-Wei; `DM-45291 <https://rubinobs.atlassian.net/browse/DM-45291>`_). 
+Interestingly, the amplitude of the signal during the vibration event is barely twice. 
+
+         
+
+.. figure:: /_static/camhex-current-None.png
+   :name: 1485-current-none
+
+   MTCam Hexapod currents through struts 1 to 6 before the TEA vibration. Note that FFT analysis on hexapod currents is 
+   unreliable as we have not yet modelled the baseline strut current profile.   
+
+
+.. figure:: /_static/camhex-current-012-Strong.png
+   :name: 1485-current012-strong
+
+   MTCam Hexapod currents through struts 1 to 3 during the TEA vibration.
+
+
+.. figure:: /_static/camhex-current-345-Strong.png
+   :name: 1485-current012-strong
+
+   MTCam Hexapod currents through struts 4 to 6 during the TEA vibration.
+
+
+
+
+Analysis of Strut currents: During a 2 minute window in the TEA vibration, we detect a characteristic peak frequency 
+of ~0.49 Hz in all 6 motor currents, same as positions and again consistent with MTRotator Analysis which gave us a 
+0.54 Hz (Te-Wei; DM-45291). Interestingly, current through Strut 2 also shows the 2nd and 4th harmonics while current 
+through Strut 3 shows 2nd and 3rd harmonics of the 0.49 Hz. Strut 4 current shows a lot more (it is also the famous 
+runaway Strut !). Each of the Strut currents show dramatic increase in amplitudes. 
+
 
 TEA Vibration Analysis using MTM2Hexapod telemetries
 ----------------------------------------------------
 
-This analyses is the same as the previous one but with MTMHexapod telemetries.
+
+Analysis of Strut currents: During a 2 minute window in the TEA vibration, we detect a characteristic peak frequency of ~0.49 Hz in all 6 motor currents, same as positions and again consistent with MTRotator Analysis which gave us a 0.54 Hz (Te-Wei; DM-45291). Interestingly, current through Strut 2 also shows the 2nd and 4th harmonics while current through Strut 3 shows 2nd and 3rd harmonics of the 0.49 Hz. Strut 4 current shows a lot more (it is also the famous runaway Strut !). Each of the Strut currents show dramatic increase in amplitudes. 
 
 Results for analysis SITCOM-1486
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
