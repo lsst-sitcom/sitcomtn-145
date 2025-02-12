@@ -13,6 +13,14 @@ license.id = "CC-BY-4.0"
 state = "draft"
 
 [[technote.authors]]
+name.given = "Marina"
+name.family = "Pavlovic"
+orcid = "https://orcid.org/0000-0001-5560-7051"
+[[technote.authors.affiliations]]
+name = "Vera C. Rubin Observatory"
+internal_id = "RubinObsC"
+address = "Avenida Juan Cisternas #1500, La Serena, Chile"
+
 name.given = "Kshitija"
 name.family = "Kelkar"
 internal_id = "kelkark"
@@ -21,3 +29,8 @@ orcid = "https://orcid.org/0000-0002-8130-3593"
 name = "Vera C. Rubin Observatory"
 internal_id = "RubinObsC"
 address = "Avenida Juan Cisternas #1500, La Serena, Chile"
+
+name.given = "Ignacio"
+name.family = "Sevilla"
+
+
