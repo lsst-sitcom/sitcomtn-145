@@ -9,7 +9,7 @@ This Technote (TN) summarizes all analyses conducted to understand the vibration
 
 Introduction
 ============
-On the night of Saturday, March 9, during laser tracker testing, measurements were taken at zenith on the ComCam hexapod. 
+On the night of Saturday, March 9, during laser tracker testing, measurements were taken at the zenith of the ComCam hexapod. 
 Observations in the laser tracker’s watcher window indicated that the laser could not lock onto its targets, with target movement showing approximately 2 mm displacement in the X-axis. 
 As a precautionary measure, the telescope was placed in Lockout/Tagout (LOTO), and personnel proceeded to the 8th floor. 
 There, an unusual noise was immediately detected from the top end of the telescope, described as resembling:
@@ -27,7 +27,7 @@ With remote support, the cold2 cryotel was powered down, though this had no impa
 Subsequently, an internal fan within ComCam was also turned off, but this adjustment likewise did not alter the noise.
 
 Personnel awaited confirmation that ComCam had sufficiently warmed up, allowing for telescope movement. 
-Positioned at zenith, further measurements were taken, and by approximately 1 pm, the laser tracker successfully re-acquired the camera targets. 
+Positioned at the zenith, further measurements were taken, and by approximately 1 pm, the laser tracker successfully re-acquired the camera targets. 
 Upon returning to the dome, it was confirmed that the noise had ceased, thus eliminating the initial vibration effect observed.
 
 The attached video clip demonstrates the variation in ambient noise levels, recorded at 11:30 PM on Saturday, 11:30 AM on Sunday, and 1:00 PM on Sunday, showing a distinct reduction in noise.
@@ -41,7 +41,7 @@ Related Tickets
 * `SITCOM-1485 <https://rubinobs.atlassian.net/browse/SITCOM-1485>`_: *TEA Vibration Analysis using MTCamHexapod telemetries*
 * `SITCOM-1486 <https://rubinobs.atlassian.net/browse/SITCOM-1486>`_: *TEA Vibration Analysis using MTM2Hexapod telemetries*
 * `SITCOM-1487 <https://rubinobs.atlassian.net/browse/SITCOM-1487>`_: *TEA Vibration Analysis using MTM2 telemetries*
-* `SITCOM-1488 <https://rubinobs.atlassian.net/browse/SITCOM-1488>`_: *TEA Vibration Analysis using TMA telemetries*
+
 * `OBS-467 <https://rubinobs.atlassian.net/browse/OBS-467>`_: *Vibrations coming from the top end of TMA*
 * `BLOCK-197 <https://rubinobs.atlassian.net/browse/BLOCK-197>`_: *Alignment of M2 and Camera using Hexapods and the Laser Tracker relative to the Yellow Cross*
 
@@ -85,7 +85,7 @@ Notably, both hexapods were subject to significant movement near the onset of th
 
    Rotator telemetry data duration vibration event.
 
-Extract dominant frequencies from sound waves in the video associated with vibrations on Top-End Assembly
+Extract dominant frequencies from sound waves in the video associated with vibrations on the Top-End Assembly
 -----------------------------------------------------------------------------------------------------
 
 Three videos with sound were recorded from the TEA, at three different instances -- 
@@ -97,7 +97,7 @@ Three videos with sound were recorded from the TEA, at three different instances
 **event 3**: 10-03-2024 --> without vibrations
 
 The objective is to analyze the dominant frequencies present in the audio signals of the video for each of the three
-events. For each event, we extract the audio from the .mp4 video and analyse the audio signals in each of the two channels
+events. For each event, we extract the audio from the .mp4 video and analyze the audio signals in each of the two channels
 separately. Note that we have not denoised the signal. 
 
 
@@ -317,7 +317,7 @@ a dramatic increase in amplitudes.
 TEA Vibration Analysis using MTM2 telemetries
 ---------------------------------------------
 
-The following plots consider MTM2 telemetries. In this case positions, rotations (from the independent measurement system) and displacements are produced per axis, together with their FFT.
+The following plots consider MTM2 telemetries. In this case positions, rotations (from the independent measurement system), and displacements are produced per axis, together with their FFT.
 
 .. figure:: /_static/mtm2_positionIMS_Position_Strong.png
    :name: fig-M2-positionIMS-Position
@@ -336,30 +336,25 @@ The following plots consider MTM2 telemetries. In this case positions, rotations
 
 Upon study of the IMS position and rotation variables, a clear 0.5 Hz vibration or oscillation is seen. This can be seen in the 'y' direction and xRot and yRot rotation axes more clearly. The displacement sensors detect this clearly in the delta or displacement as well, in all tangent link points. These values are to be contrasted with those from the hexapods as the relative amplitudes could say something about the origin of the vibration.
 
-
-TEA Vibration Analysis using TMA telemetries
---------------------------------------------
-
-This analysis is the same as the previous one but with TMA telemetries.
-
-Results for analysis SITCOM-1488
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Plots and description here:
-
 Discussion
 ==========
+
 The vibration analysis on the Top End Assembly (TEA) yielded important insights into the nature and possible causes of the observed behavior. From the telemetry data and audio signal analyses:
 
 1. **Telemetries**:
+
    - Low-amplitude vibrations were detected in both the Rotator and M2 systems during the March 10 event, with the Rotator vibrations starting at 00:37:55 UTC and tapering off by 16:08:41 UTC.
+
    - Hexapod movements were significant during warm-up sequences but did not correspond to the 2 mm displacement observed by the Laser Tracker.
 
 2. **Audio Signal Analysis**:
+
    - FFT and PSD analyses highlighted dominant frequencies of ~50 Hz for events 1 and 3, and ~63 Hz for event 2, though these findings were inconclusive for linking vibrations directly to mechanical sources.
+
    - Spectrograms indicated consistent time-dependent signals at 200–250 Hz, showing similar patterns in events 2 and 3.
 
-3. **Rotator and Cryotel Tests**:
+3. **Rotator Tests**:
+
    - Soak tests with the Rotator in various configurations and disabling the Cryotel fan did not conclusively identify the source of vibrations.
 
 These observations suggest that the TEA vibrations are multifactorial and may result from complex interactions between subsystems rather than a single source. 
@@ -369,11 +364,15 @@ Conclusions
 ===========
 
 While the exact cause of the TEA vibrations remains inconclusive, several key findings were established:
+
 - The amplitude of vibrations in the Rotator and M2 does not account for the 2 mm displacement observed by the Laser Tracker.
+
 - Dominant frequencies detected in the audio signals provide potential leads for further investigation but do not conclusively link to mechanical components.
+
 - Disabling the Cryotel and other potential noise sources had no measurable impact on the vibrations.
 
 Future efforts should focus on:
+
 - Exploring structural and environmental factors contributing to the vibrations.
 
 The results, while not definitive, provide a strong foundation for ongoing investigation into the behavior of the TEA and its subsystems.
