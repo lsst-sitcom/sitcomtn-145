@@ -30,7 +30,10 @@ name = "Vera C. Rubin Observatory"
 internal_id = "RubinObsC"
 address = "Avenida Juan Cisternas #1500, La Serena, Chile"
 
-name.given = "Ignacio"
+[[technote.authors]]
+name.given = "Nacho"
 name.family = "Sevilla"
+internal_id = "sevillai"
+affiliations = [{name = "CIEMAT", internal_id = "CIEMAT", address = "Av. Complutense 40 28040 Madrid Spain"}]
 
 
